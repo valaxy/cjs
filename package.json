@@ -1,0 +1,11 @@
+{
+  "name": "cjs",
+  "version": "0.1.0-alpha",
+  "dependencies": {
+    "amd-loader": "github:valaxy/amd-loader"
+  },
+  "devDependencies": {
+    "qunitjs": "^1.20.0",
+    "requirejs": "^2.1.22"
+  }
+}

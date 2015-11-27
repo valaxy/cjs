@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Qunit Unit test</title>
+    <link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+    <script src="../node_modules/requirejs/require.js"></script>
+    <script>
+        requirejs.config({baseUrl: '../'})
+        requirejs.config({
+            paths: {
+                p           : 'test/modules/',
+                'amd-loader': 'node_modules/amd-loader/amd-loader'
+            },
+            map  : {
+                '*': {
+                    ma: 'test/modules/a',
+                    mb: 'test/modules/b',
+                    mc: 'test/modules/c'
+                }
+            },
+            cjs  : [
+                'ma',
+                'p'
+            ]
+        })
+        QUnit.config.autostart = false
+        require(['test/test'], function () {
+            QUnit.start()
+        })
+    </script>
+</body>
+</html>
