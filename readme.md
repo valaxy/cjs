@@ -6,7 +6,6 @@ Load CommonJS modules without needing to convert them to AMD
 - can convert non-relative require to CommonJS require with configuration
 - npm support and npm support only
 - qunit test support
-- update to 0.1.0
 
 
 # Install
@@ -20,7 +19,7 @@ npm install --save github:valaxy/cjs
 requirejs.config({
     paths: {
         p1: 'node_modules/a/',
-        p2: 'node_modules/b/
+        p2: 'node_modules/b/'
     },
     maps: {
         m1: 'node_modules/a/x',
