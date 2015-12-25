@@ -1,6 +1,6 @@
 {
   "name": "cjs",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "dependencies": {
     "amd-loader": "github:valaxy/amd-loader"
   },
