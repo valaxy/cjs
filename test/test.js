@@ -12,4 +12,10 @@ define(function (require) {
 	QUnit.test('relative', function (assert) {
 		assert.equal(require('cjs!test/modules/z'), 'zc')
 	})
+
+	QUnit.test('inline-require', function (assert) {
+		assert.deepEqual(require('cjs!test/modules/inline-require/index'), {
+			data: 'index'
+		})
+	})
 })

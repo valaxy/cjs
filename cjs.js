@@ -1,5 +1,5 @@
 define(['amd-loader'], function (amdLoader) {
-	var cjsRequireRegExp = /\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g
+	var cjsRequireRegExp = /[ \t]*require\s*\(\s*["']([^'"\s]+)["'][ \t]*\)/g
 	return amdLoader('cjs', 'js', function (name, source, req, callback, errback, config) {
 		// replace internal relative requires with commonJS requires themselves
 		// global requires are replaced depended

@@ -3,10 +3,10 @@
 Load CommonJS modules without needing to convert them to AMD
 
 # What is the differences about origin repo [guybedford/cjs](https://github.com/guybedford/cjs)
-- can convert non-relative require to CommonJS require with configuration
+- can transform non-relative require to CommonJS require by configuration
 - npm support and npm support only
 - qunit test support
-
+- some bugs fix
 
 # Install
 ```bash
