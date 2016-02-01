@@ -17,6 +17,7 @@ define(['amd-loader'], function (amdLoader) {
 			}
 		})
 		// wrap up in common js wrapper
-		callback('define(function(require, exports, module) { (function(){"use strict";var define=undefined;' + source + ' \n//# sourceURL=' + req.toUrl(name) + '\n})() });')
+		//callback('define(function(require, exports, module) { (function(){"use strict";var define=undefined;' + source + ' \n//# sourceURL=' + req.toUrl(name) + '\n})() });')
+		callback('define(function(require, exports, module) { (function(){"use strict";var define=undefined;' + source + '\n})() });')
 	})
 })
