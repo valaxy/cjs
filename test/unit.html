@@ -24,10 +24,16 @@
                     mc: 'test/modules/c'
                 }
             },
-            cjs  : [
-                'ma',
-                'p'
-            ]
+            cjs  : {
+                addSourceMap: true,
+                sourceMapUrl: function (name) {
+                    return `${location.protocol}//${location.host}/cjs/${name}.js.map`
+                },
+                cjsPaths    : [
+                    'ma',
+                    'p'
+                ]
+            }
         })
         QUnit.config.autostart = false
         require(['test/test'], function () {

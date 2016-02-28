@@ -5,7 +5,7 @@ define(function (require) {
 		assert.equal(require('cjs!test/modules/x'), 'xa')
 	})
 
-	QUnit.test('config: paths', function (assert) {
+	QUnit.test('config: cjsPaths', function (assert) {
 		assert.equal(require('cjs!test/modules/y'), 'yb')
 	})
 
@@ -18,4 +18,8 @@ define(function (require) {
 			data: 'index'
 		})
 	})
+
+	var error = require('cjs!./modules/run-error').default
+	error()
+	//require('cjs!./modules/load-error')
 })

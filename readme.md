@@ -1,5 +1,7 @@
 > Inspired by [guybedford/cjs](https://github.com/guybedford/cjs)
 
+[![devDependency Status](https://david-dm.org/valaxy/cjs/dev-status.svg?style=flat-square)](https://david-dm.org/valaxy/cjs#info=devDependencies)
+
 Load CommonJS modules without needing to convert them to AMD
 
 # What is the differences about origin repo [guybedford/cjs](https://github.com/guybedford/cjs)
@@ -25,10 +27,16 @@ requirejs.config({
         m1: 'node_modules/a/x',
         m2: 'node_modules/b/y'
     },
-    cjs: [
-        'p1',
-        'm1'
-    ]
+    cjs: {
+        addSourceMap: true，
+        sourceMapUrl: function (name) {
+            return `${location.protocol}//${location.host}/cjs/${name}.js.map`
+        },
+        cjsPaths: [
+            'p1',
+            'm1'
+        ]
+    }
 })
 
 // main.js
