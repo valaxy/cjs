@@ -5,7 +5,16 @@ define(['amd-loader'], function (amdLoader) {
 	"use strict"
 
 	let defaultSourceMapUrl = function (name) {
-		return name
+		return dir(location.href) + '/' + name + '.js.map'
+	}
+
+	let dir = function (path) {
+		var index = path.lastIndexOf('/')
+		if (index < 0) {
+			return path
+		} else {
+			return path.substr(0, index)
+		}
 	}
 
 	const cjsRequireRegExp = /[ \t]*require\s*\(\s*["']([^'"\s]+)["'][ \t]*\)/g
@@ -17,7 +26,7 @@ define(['amd-loader'], function (amdLoader) {
 
 		let getSourceMap = function () {
 			if (addSourceMap) {
-				return `\n//# sourceMappingURL=${sourceMapUrl(name)}\n`
+				return `\n//# sourceMappingURL=${sourceMapUrl(req.toUrl(name))}\n`
 			} else {
 				return ''
 			}

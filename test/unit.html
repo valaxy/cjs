@@ -14,7 +14,7 @@
         requirejs.config({baseUrl: '../'})
         requirejs.config({
             paths: {
-                p           : 'test/modules/',
+                p           : 'test/modules',
                 'amd-loader': 'node_modules/amd-loader/amd-loader'
             },
             map  : {
@@ -26,9 +26,6 @@
             },
             cjs  : {
                 addSourceMap: true,
-                sourceMapUrl: function (name) {
-                    return `${location.protocol}//${location.host}/cjs/${name}.js.map`
-                },
                 cjsPaths    : [
                     'ma',
                     'p'

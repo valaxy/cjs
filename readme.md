@@ -29,9 +29,6 @@ requirejs.config({
     },
     cjs: {
         addSourceMap: true，
-        sourceMapUrl: function (name) {
-            return `${location.protocol}//${location.host}/cjs/${name}.js.map`
-        },
         cjsPaths: [
             'p1',
             'm1'
