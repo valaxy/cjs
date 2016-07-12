@@ -5,7 +5,7 @@
     "amd-loader": "github:valaxy/amd-loader"
   },
   "devDependencies": {
-    "qunitjs": "^1.22.0",
-    "requirejs": "^2.1.22"
+    "qunitjs": "^2.0.0",
+    "requirejs": "^2.2.0"
   }
 }

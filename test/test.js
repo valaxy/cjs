@@ -19,7 +19,7 @@ define(function (require) {
 		})
 	})
 
-	var error = require('cjs!./modules/run-error').default
-	error()
+	//var error = require('cjs!./modules/run-error').default
+	//error()
 	//require('cjs!./modules/load-error')
 })
